@@ -13,7 +13,8 @@ from telegram.ext import (
     CallbackQueryHandler
 )
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8631125046:AAE9-G7mjtRZIPCbmfMKZfbdW14sdru5dDk
+")
 
 CHANNELS = [
     "LEGEND_MARKETt",
@@ -41,7 +42,8 @@ async def check_user(user_id, bot):
 
         return True
 
-    except:
+    except Exception as e:
+        print(e)
         return False
 
 
@@ -57,7 +59,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if verified:
 
         await update.message.reply_text(
-            "✅ Verification Successful!\n\nWelcome to Pulse Sender 🔥"
+            "✅ Access Granted!\n\nWelcome to Pulse Sender 🔥"
         )
 
         return
@@ -89,7 +91,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(buttons)
 
     await update.message.reply_text(
-        "⚠️ Please join all required channels first to continue.",
+        "⚠️ Please join all required channels first.",
         reply_markup=reply_markup
     )
 
@@ -113,13 +115,13 @@ async def button_click(
     if verified:
 
         await query.message.reply_text(
-            "✅ Access Granted!\n\nWelcome to Pulse Sender 🔥"
+            "✅ Verification Successful!\n\nWelcome to Pulse Sender 🔥"
         )
 
     else:
 
         await query.message.reply_text(
-            "❌ Please join all required channels first."
+            "❌ Please join both channels first."
         )
 
 

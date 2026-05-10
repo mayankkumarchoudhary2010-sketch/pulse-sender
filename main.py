@@ -13,9 +13,7 @@ from telegram.ext import (
     CallbackQueryHandler
 )
 
-BOT_TOKEN = os.getenv("8631125046:AAE9-G7mjtRZIPCbmfMKZfbdW14sdru5dDk
-")
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNELS = [
     "LEGEND_MARKETt",
     "PulseSenderUpdates"

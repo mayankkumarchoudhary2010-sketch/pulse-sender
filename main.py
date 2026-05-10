@@ -20,8 +20,6 @@ CHANNELS = [
     "PulseSenderUpdates"
 ]
 
-PRIVATE_GROUP_LINK = "https://t.me/+ojvio8vThl0yNWE1"
-
 
 async def check_user(user_id, bot):
 
@@ -77,13 +75,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             InlineKeyboardButton(
                 "📢 Join Updates Channel",
                 url="https://t.me/PulseSenderUpdates"
-            )
-        ],
-
-        [
-            InlineKeyboardButton(
-                "👥 Join Private Group",
-                url=PRIVATE_GROUP_LINK
             )
         ],
 
